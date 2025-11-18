@@ -30,4 +30,173 @@
 
         /* --- 工作经历卡片 --- */
         .experience-card { background: white; padding: 30px; border-radius: 16px; margin-bottom: 30px; border-left: 5px solid var(--primary); box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
-        .job-header { display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; flex
+        .job-header { display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; flex-wrap: wrap; }
+        .job-title { font-size: 1.2rem; font-weight: bold; color: var(--dark); }
+        .job-date { color: var(--primary); font-weight: bold; }
+        .job-list li { margin-bottom: 8px; list-style-position: inside; color: #475569; }
+        
+        /* --- 核心功能：跳转按钮样式 (新增) --- */
+        .action-links { margin-top: 20px; margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .link-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #eff6ff; border: 1px solid #bfdbfe; 
+            padding: 8px 16px; border-radius: 6px; 
+            text-decoration: none; color: #1e40af; font-size: 0.9rem; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .link-btn:hover { background: #2563eb; border-color: #2563eb; color: white; }
+        .link-btn svg { width: 18px; height: 18px; }
+
+        /* --- 核心功能：作品图片网格 --- */
+        .portfolio-preview { margin-top: 20px; padding-top: 20px; border-top: 1px dashed #cbd5e1; }
+        .preview-title { font-size: 0.9rem; font-weight: bold; color: #94a3b8; margin-bottom: 10px; display: block; }
+        .img-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+        .img-box { 
+            height: 160px; 
+            background-color: #f1f5f9; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            position: relative;
+            cursor: pointer;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s;
+        }
+        .img-box:hover { transform: scale(1.02); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .img-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #64748b; font-size: 0.8rem; text-align: center; padding: 10px; }
+
+        /* --- 技能标签 --- */
+        .skills-bar { margin-top: 50px; text-align: center; }
+        .skill-pill { display: inline-block; background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 6px 16px; border-radius: 20px; margin: 5px; font-size: 0.85rem; font-weight: 600; }
+
+        footer { text-align: center; margin-top: 60px; padding: 40px 0; border-top: 1px solid #e2e8f0; color: #64748b; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .job-header { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <div class="logo">陈世明.Design</div>
+        <a href="mailto:1027662772@qq.com" class="btn">联系我</a>
+    </nav>
+
+    <header>
+        <h1>“不会 AI 的设计师<br>不是好的新媒体人”</h1>
+        <p class="subtitle">2年实战经验 / 视觉与数据双驱 / 擅长降本增效</p>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-num">15%+</span>
+                <span class="stat-desc">粉丝总量增长</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">100W+</span>
+                <span class="stat-desc">视频累积浏览</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">30%</span>
+                <span class="stat-desc">设计成本降低</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">14+</span>
+                <span class="stat-desc">月均科普产出</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="experience-card">
+        <div class="job-header">
+            <div>
+                <div class="job-title">企划 / 品牌服务</div>
+                <div style="color:#64748b">杭州萧山某综合医疗医院</div>
+            </div>
+            <div class="job-date">2024.10 - 至今</div>
+        </div>
+        
+        <ul class="job-list">
+            <li>构建<b>“医疗科普+品牌服务”</b>双轨矩阵，公众号阅读量增长100%。</li>
+            <li>短视频黄V账号累积浏览量达 100 万+，咨询量提升 10%。</li>
+            <li>主导院内宣传设计，优化流程提升病例制作效率 50%。</li>
+        </ul>
+
+        <div class="action-links">
+            <a href="plan.pdf" target="_blank" class="link-btn">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                查看活动策划案 (PDF)
+            </a>
+
+            <a href="https://www.bilibili.com/" target="_blank" class="link-btn">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                观看 AI 短视频作品
+            </a>
+        </div>
+
+        <div class="portfolio-preview">
+            <span class="preview-title">相关视觉作品 (点击图片无效，仅做展示)</span>
+            <div class="img-grid">
+                <div class="img-box">
+                    <img src="p1.jpg" alt="医美海报" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div class="img-placeholder">图片加载失败<br>请上传 p1.jpg</div>
+                </div>
+                <div class="img-box">
+                    <img src="p2.jpg" alt="Banner设计" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div class="img-placeholder">图片加载失败<br>请上传 p2.jpg</div>
+                </div>
+                <div class="img-box">
+                    <img src="p3.jpg" alt="AI模特" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div class="img-placeholder">图片加载失败<br>请上传 p3.jpg</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience-card">
+        <div class="job-header">
+            <div>
+                <div class="job-title">设计师</div>
+                <div style="color:#64748b">天长广告公司</div>
+            </div>
+            <div class="job-date">2023.8 - 2024.5</div>
+        </div>
+        <ul class="job-list">
+            <li>负责淘宝全套设计（首页/主图/详情页）及线下门头设计。</li>
+            <li>参与政府旅游活动宣传制作（PPT、视频剪辑与调色）。</li>
+            <li>核算物料价格，有效控制项目成本。</li>
+        </ul>
+        <div class="portfolio-preview">
+            <span class="preview-title">设计产出示例</span>
+            <div class="img-grid">
+                 <div class="img-box">
+                    <div class="img-placeholder">淘宝详情页<br>设计作品</div>
+                </div>
+                 <div class="img-box">
+                    <div class="img-placeholder">政府活动<br>物料设计</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-bar">
+        <h3 style="margin-bottom: 15px;">技术技能栈</h3>
+        <span class="skill-pill">Adobe Photoshop</span>
+        <span class="skill-pill">Illustrator</span>
+        <span class="skill-pill">After Effects</span>
+        <span class="skill-pill">Premiere Pro</span>
+        <span class="skill-pill">Figma</span>
+        <span class="skill-pill">AI 绘画 (Midjourney)</span>
+        <span class="skill-pill">新媒体矩阵运营</span>
+    </div>
+
+    <footer>
+        <h2>Let's Work Together</h2>
+        <p style="margin-top: 10px;">电话: 17605500124 | 邮箱: 1027662772@qq.com</p>
+    </footer>
+</div>
+
+</body>
+</html>
