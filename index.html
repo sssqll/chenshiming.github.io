@@ -62,6 +62,18 @@
         <a href="#" class="btn">下载完整 PDF 作品集</a>
     </nav>
 
+    /* 新增的跳转按钮样式 */
+.action-links { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
+.link-btn {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: white; border: 1px solid #e2e8f0; 
+    padding: 8px 16px; border-radius: 6px; 
+    text-decoration: none; color: #475569; font-size: 0.9rem; font-weight: 600;
+    transition: all 0.2s;
+}
+.link-btn:hover { background: #f1f5f9; border-color: #cbd5e1; color: #2563eb; }
+.link-btn svg { width: 16px; height: 16px; }
+    
     <header>
         <h1>“不会 AI 的设计师<br>不是好的新媒体人”</h1>
         <p class="subtitle">2年经验 / 粉丝增长15%+ / 视觉与数据双驱</p>
@@ -81,6 +93,19 @@
                 <div style="color:#64748b">2024.10 - 至今</div>
             </div>
         </div>
+        <div class="action-links">
+    
+    <a href="plan.pdf" target="_blank" class="link-btn">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        查看活动策划案 (PDF)
+    </a>
+
+    <a href="https://www.bilibili.com/video/你的视频ID" target="_blank" class="link-btn">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        观看 AI 短视频作品
+    </a>
+
+</div>
         <ul class="job-list">
             <li>构建<b>“医疗科普+品牌服务”</b>双轨矩阵，阅读量增长100%。</li>
             <li>短视频黄V账号累积浏览量达 100 万+。</li>
@@ -147,3 +172,4 @@
 
 </body>
 </html>
+
